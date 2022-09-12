@@ -7,11 +7,12 @@ class ViewPostScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('View Post #$id'),
-        ),
-        body: Center(
-          child: Text('View Post'),
-        ));
+      appBar: AppBar(
+        title: Text('View Post #$id'),
+      ),
+      body: Center(
+        child: Text('View Post'),
+      ),
+    );
   }
 }
