@@ -38,4 +38,9 @@ abstract class _PostStore with Store {
     posts = postList;
     isLoading = false;
   }
+
+  @action
+  Post findPost(int id) {
+    return posts.firstWhere((element) => element.id == id);
+  }
 }

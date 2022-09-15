@@ -48,6 +48,20 @@ mixin _$PostStore on _PostStore, Store {
     return _$getPostsAsyncAction.run(() => super.getPosts());
   }
 
+  late final _$_PostStoreActionController =
+      ActionController(name: '_PostStore', context: context);
+
+  @override
+  Post findPost(int id) {
+    final _$actionInfo =
+        _$_PostStoreActionController.startAction(name: '_PostStore.findPost');
+    try {
+      return super.findPost(id);
+    } finally {
+      _$_PostStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''

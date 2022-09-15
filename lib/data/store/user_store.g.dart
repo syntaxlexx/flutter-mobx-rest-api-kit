@@ -48,6 +48,20 @@ mixin _$UserStore on _UserStore, Store {
     return _$getUsersAsyncAction.run(() => super.getUsers());
   }
 
+  late final _$_UserStoreActionController =
+      ActionController(name: '_UserStore', context: context);
+
+  @override
+  User findUser(int id) {
+    final _$actionInfo =
+        _$_UserStoreActionController.startAction(name: '_UserStore.findUser');
+    try {
+      return super.findUser(id);
+    } finally {
+      _$_UserStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     return '''

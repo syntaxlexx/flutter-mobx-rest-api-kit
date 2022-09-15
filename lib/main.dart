@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'app_router.dart';
 import 'di/locator.dart';
-import 'screens/error_page.dart';
+import 'ui/error_screen.dart';
 
 void main() {
   setup();
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter MobX Todo App',
       theme: FlexThemeData.light(scheme: FlexScheme.mandyRed),
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.mandyRed),

@@ -14,10 +14,12 @@ class UserApi {
           'https://reqres.in/api/users?page=1',
         ),
       );
-      final data = (jsonDecode(res.body) as List)
+
+      final data = (jsonDecode(res.body));
+      final users = (data['data'] as List)
           .map((user) => User.fromMap(user as Map<String, dynamic>))
           .toList();
-      return data;
+      return users;
     } catch (e) {
       debugPrint(e.toString());
       rethrow;
