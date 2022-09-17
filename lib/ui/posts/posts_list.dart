@@ -3,7 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../../data/store/post_store.dart';
 import '../../di/locator.dart';
-import '../widgets/image.dart';
+import '../widgets/widgets.dart';
 import 'view_post_screen.dart';
 
 class PostsList extends StatelessWidget {
@@ -51,8 +51,7 @@ class PostsList extends StatelessWidget {
                           width: width * 0.35,
                           height: 110,
                           child: CachedImage(
-                            url: post.image ??
-                                'https://placeimg.com/640/480/any',
+                            url: post.image ?? '',
                           ),
                         ),
                         Expanded(

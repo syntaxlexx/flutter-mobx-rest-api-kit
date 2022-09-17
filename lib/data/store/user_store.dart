@@ -38,10 +38,4 @@ abstract class _UserStore with Store {
     users = list;
     isLoading = false;
   }
-
-  @action
-  User findUser(int id) {
-    print(users.toString());
-    return users.firstWhere((element) => element.id == id);
-  }
 }

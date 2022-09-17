@@ -3,6 +3,8 @@ import 'package:page_transition/page_transition.dart';
 
 import 'data/models/post.dart';
 import 'data/models/user.dart';
+import 'ui/auth/login_screen.dart';
+import 'ui/dashboard/dashboard_screen.dart';
 import 'ui/error_screen.dart';
 import 'ui/home_screen.dart';
 import 'ui/posts/view_post_screen.dart';
@@ -12,6 +14,8 @@ import 'ui/users/view_user_screen.dart';
 final appRoutes = {
   HomeScreen.route: (context) => const HomeScreen(),
   ErrorScreen.route: (context) => const ErrorScreen(),
+  LoginScreen.route: (context) => const LoginScreen(),
+  DashboardScreen.route: (context) => const DashboardScreen(),
 };
 
 // define routes with animations and arguments

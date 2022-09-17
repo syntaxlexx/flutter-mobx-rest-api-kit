@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class DashboardScreen extends StatelessWidget {
+  const DashboardScreen({super.key});
+  static const route = '/dashboard';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Dashboard'),
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: const [Text('Dahsboard')],
         ),
       ),
     );

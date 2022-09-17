@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:unicons/unicons.dart';
 
 import '../../data/store/user_store.dart';
 import '../../di/locator.dart';
-import '../widgets/avatar.dart';
+import '../widgets/widgets.dart';
 import 'view_user_screen.dart';
 
 class UsersList extends StatelessWidget {
@@ -19,8 +20,6 @@ class UsersList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-
     return Observer(
       builder: (context) {
         if (_store.isLoading) {
@@ -82,7 +81,7 @@ class UsersList extends StatelessWidget {
                           width: 20,
                         ),
                         Icon(
-                          Icons.chevron_right,
+                          UniconsLine.angle_right,
                           color: Colors.grey.shade500,
                           size: 20,
                         ),

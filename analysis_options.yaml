@@ -5,6 +5,12 @@ analyzer:
     implicit-casts: false
 #    implicit-dynamic: false
 
+  exclude:
+    - "**/*.g.dart"
+    # - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore
+    
 linter:
   rules:
     avoid_types_on_closure_parameters: true
@@ -21,3 +27,4 @@ linter:
     unawaited_futures: true
     unnecessary_statements: true
     use_super_parameters: true
+    prefer_const_literals_to_create_immutables: true

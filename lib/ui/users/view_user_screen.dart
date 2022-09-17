@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../../data/models/user.dart';
-import '../widgets/image.dart';
+import '../widgets/widgets.dart';
 
 class ViewUserScreen extends StatelessWidget {
   static const route = '/users/show';
@@ -41,8 +41,8 @@ class ViewUserScreen extends StatelessWidget {
                   ),
                 ],
                 flexibleSpace: FlexibleSpaceBar(
-                  background: CachedImage(url: user!.avatar ?? ''),
-                  title: Text('User #${user!.id}'),
+                  background: CachedImage(url: user.avatar ?? ''),
+                  title: Text('User #${user.id}'),
                   centerTitle: true,
                 ),
               ),
@@ -64,16 +64,16 @@ class ViewUserScreen extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  '${user!.firstName} ${user!.lastName}',
+                  '${user.firstName} ${user.lastName}',
                   style: Theme.of(context).textTheme.headline5,
                 ),
                 const Divider(),
                 Text(
-                  'Followers: ${user!.followers}',
+                  'Followers: ${user.followers}',
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 Text(
-                  'Email: ${user!.email}',
+                  'Email: ${user.email}',
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ],

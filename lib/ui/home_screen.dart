@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:unicons/unicons.dart';
 
+import 'auth/login_screen.dart';
 import 'posts/posts_list.dart';
 import 'users/users_list.dart';
 
@@ -26,6 +28,12 @@ class _HomeScreenState extends State<HomeScreen>
     return Scaffold(
       appBar: AppBar(
         title: const Text('MobX API Demo'),
+        actions: [
+          IconButton(
+            onPressed: () => Navigator.pushNamed(context, LoginScreen.route),
+            icon: const Icon(UniconsLine.user),
+          ),
+        ],
         bottom: TabBar(
           controller: _tabController,
           tabs: const <Widget>[

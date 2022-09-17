@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../../data/models/post.dart';
-import '../widgets/image.dart';
+import '../widgets/widgets.dart';
 
 class ViewPostScreen extends StatelessWidget {
   static const route = '/posts/show';
@@ -41,8 +41,8 @@ class ViewPostScreen extends StatelessWidget {
                   ),
                 ],
                 flexibleSpace: FlexibleSpaceBar(
-                  background: CachedImage(url: post!.image ?? ''),
-                  title: Text('Post #${post!.id}'),
+                  background: CachedImage(url: post.image ?? ''),
+                  title: Text('Post #${post.id}'),
                   centerTitle: true,
                 ),
               ),
@@ -64,12 +64,12 @@ class ViewPostScreen extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  post!.title ?? '',
+                  post.title ?? '',
                   style: Theme.of(context).textTheme.headline5,
                 ),
                 const Divider(),
                 Text(
-                  post!.body ?? '',
+                  post.body ?? '',
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ],
