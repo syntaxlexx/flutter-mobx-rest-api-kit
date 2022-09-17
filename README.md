@@ -7,6 +7,17 @@ A flutter Mobx app built with
 
 ![Screenshot 1](_files/screenshot.jpg)
 
+#### Checklist
+- [x] Common widgets
+- [x] Error screen
+- [x] Posts list
+- [x] Posts logic (store, api)
+- [x] Users list
+- [x] Users logic (store, api)
+- [x] Login screen
+- [ ] Login logic
+- [ ] Dashboard screen
+
 ## Dev
 In order to work will stores in MobX, we are required to run an external command into the terminal which will build the store for us. The command for that is:
 
