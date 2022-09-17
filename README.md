@@ -8,6 +8,7 @@ A flutter Mobx app built with
 ![Screenshot 1](_files/screenshot.jpg)
 
 #### Checklist
+- [x] Splash Screen + logo (psd files)
 - [x] Common widgets
 - [x] Error screen
 - [x] Posts list
